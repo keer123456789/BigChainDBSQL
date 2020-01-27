@@ -7,10 +7,13 @@ import com.bigchaindb.api.TransactionsApi;
 import com.bigchaindb.builders.BigchainDbTransactionBuilder;
 import com.bigchaindb.constants.BigchainDbApi;
 import com.bigchaindb.constants.Operations;
+
 import com.bigchaindb.model.*;
 import com.bigchaindb.util.NetworkUtils;
 import com.google.gson.JsonSyntaxException;
-import domain.BigchaindbData;
+
+import com.keer.Pojo.BigchaindbData;
+import com.keer.Pojo.MetaData;
 import net.i2p.crypto.eddsa.EdDSAPrivateKey;
 import net.i2p.crypto.eddsa.EdDSAPublicKey;
 import okhttp3.Response;
