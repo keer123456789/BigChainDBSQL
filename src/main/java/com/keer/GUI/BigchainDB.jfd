@@ -10,86 +10,140 @@ new FormModel {
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 				name: "panel3"
 				"background": new java.awt.Color( 204, 204, 204, 255 )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "connInfo"
+					"text": "信息"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 15
+					"y": 0
+					"width": 50
+					"height": 22
+				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": -5
 				"y": 465
 				"height": 25
-				"width": 785
+				"width": 795
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
 				name: "panel4"
 				"background": new java.awt.Color( 204, 204, 204, 255 )
 				add( new FormComponent( "javax.swing.JLabel" ) {
-					name: "label1"
-					"text": "text"
+					name: "Host"
+					"text": "Host"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 0
-					"y": 0
+					"x": 5
+					"y": 10
+					"width": 50
+					"height": 30
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "hostField"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 60
+					"y": 15
+					"width": 135
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "keyField"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 265
+					"y": 15
+					"width": 165
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "Key"
+					"text": "Key"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 215
+					"y": 15
+					"width": 50
+					"height": 30
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "chainInfo"
+					"text": "链上信息"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "chainInfoActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 645
+					"y": 15
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "connBtn"
+					"text": "连接"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "connBtnActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 465
+					"y": 15
 					"width": 95
-					"height": 55
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 0
 				"y": 0
 				"height": 55
-				"width": 785
-			} )
-			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-				name: "scrollPane2"
-				add( new FormComponent( "javax.swing.JTable" ) {
-					name: "table1"
-					"background": new java.awt.Color( 255, 255, 255, 255 )
-				} )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 160
-				"y": 55
-				"width": 625
-				"height": 300
-			} )
-			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-				name: "scrollPane3"
-				add( new FormComponent( "javax.swing.JTree" ) {
-					name: "tree1"
-					"background": new java.awt.Color( 255, 255, 255, 255 )
-				} )
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 0
-				"y": 55
-				"width": 160
-				"height": 410
+				"width": 790
 			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
-				name: "panel5"
+				name: "panel1"
 				"background": new java.awt.Color( 255, 255, 255, 255 )
 				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-					name: "scrollPane4"
-					add( new FormComponent( "javax.swing.JTextArea" ) {
-						name: "textArea1"
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTree" ) {
+						name: "tree1"
 						"background": new java.awt.Color( 255, 255, 255, 255 )
 					} )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 					"x": 0
 					"y": 0
-					"width": 625
-					"height": 70
+					"width": 120
+					"height": 410
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "runField"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 120
+					"y": 285
+					"width": 670
+					"height": 95
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
-					name: "button1"
+					name: "run"
 					"text": "运行"
-					"background": new java.awt.Color( 204, 204, 204, 255 )
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "runActionPerformed", true ) )
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-					"x": 480
-					"y": 75
-					"width": 125
+					"x": 675
+					"y": 375
+					"height": 35
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+						name: "tabbedPane1"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"foreground": new java.awt.Color( 204, 204, 204, 255 )
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 670
+					"height": 285
+					"x": 120
+					"y": 0
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 160
-				"y": 355
-				"height": 110
-				"width": 625
+				"x": 0
+				"y": 55
+				"height": 410
+				"width": 790
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 0 )
+			"location": new java.awt.Point( 0, 20 )
 			"size": new java.awt.Dimension( 790, 520 )
 		} )
 	}
