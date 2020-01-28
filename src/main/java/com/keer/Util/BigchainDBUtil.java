@@ -92,7 +92,7 @@ public class BigchainDBUtil {
      * @param toPublic
      * @return 返回交易id
      */
-    public String transfer(BigchaindbData metaData, String assetId, EdDSAPublicKey fromPublic, EdDSAPrivateKey fromPrivate, EdDSAPublicKey toPublic) {
+    public String transfer(Object metaData, String assetId, EdDSAPublicKey fromPublic, EdDSAPrivateKey fromPrivate, EdDSAPublicKey toPublic) {
 
         Transaction transferTransaction = null;
         try {
